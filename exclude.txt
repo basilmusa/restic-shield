@@ -1,0 +1,22 @@
+# Exclude /mnt/restic from backups
+/mnt/restic
+
+# Common excludes (uncomment if needed)
+# Cache directories
+#**/.cache
+#**/cache
+#**/Cache
+
+# Temporary files
+#**/tmp
+#**/temp
+#**/*.tmp
+
+# System files
+#**/.Trash-*
+#**/lost+found
+
+# Development
+#**/node_modules
+#**/.git
+#**/__pycache__

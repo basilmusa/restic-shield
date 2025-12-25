@@ -1,0 +1,22 @@
+[Unit]
+Description=Restic backup service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/mnt/restic/backup.sh
+User=root
+Group=root
+
+# Security settings
+PrivateTmp=yes
+NoNewPrivileges=yes
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=restic-backup
+
+[Install]
+WantedBy=multi-user.target
